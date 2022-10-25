@@ -15,13 +15,13 @@ VALUES ('Devimon', '2017-5-12', 5, TRUE,11.00);
 
 --Week1 Project2
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered , weight_kg )
-VALUES ('Charmander', '2020-2-8', 0, FALSE ,11);
+VALUES ('Charmander', '2020-2-8', 0, FALSE ,-11);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered , weight_kg )
-VALUES ('Plantmon', '2020-11-15', 2, TRUE ,5.7);
+VALUES ('Plantmon', '2020-11-15', 2, TRUE ,-5.7);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered , weight_kg )
-VALUES ('Squirtle', '1993-4-2', 3, FALSE ,12.13);
+VALUES ('Squirtle', '1993-4-2', 3, FALSE ,-12.13);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered , weight_kg )
-VALUES ('Angemon', '2005-6-12', 1, TRUE ,45);
+VALUES ('Angemon', '2005-6-12', 1, TRUE ,-45);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered , weight_kg )
 VALUES ('Boarmon', '2005-6-7', 7, TRUE ,20.4);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered , weight_kg )
