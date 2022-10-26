@@ -1,4 +1,5 @@
 /*Queries that provide answers to the questions from all projects.*/
+--Week1 Project1
 SELECT * FROM animals WHERE name LIKE '%mon%';
 SELECT name FROM animals WHERE date_of_birth  BETWEEN '2016-1-1' AND '2019-1-1';
 SELECT name FROM animals WHERE neutered =TRUE AND escape_attempts<3;
@@ -7,4 +8,40 @@ SELECT name , escape_attempts FROM animals WHERE weight_kg>10.5;
 SELECT * FROM animals WHERE neutered=TRUE;
 SELECT * FROM animals WHERE NOT name='Gabumon';
 SELECT * FROM animals WHERE weight_kg>=10.4 AND weight_kg<=17.3;
--- SELECT * from animals WHERE name = 'Luna';
+
+
+--Week1 Project2
+Begin;
+UPDATE animals 
+SET species='unspecified';
+ROLLBACK;
+
+Begin;
+UPDATE animals 
+SET species='digimon'
+WHERE name LIKE '%mon';
+UPDATE animals 
+SET species='pokemon'
+WHERE species IS NULL;
+COMMIT;
+
+BEGIN;
+DELETE FROM animals;
+ROLLBACK;
+
+BEGIN;
+DELETE FROM animals WHERE date_of_birth>'2022-1-1';
+SAVEPOINT SP1;
+UPDATE animals SET weight_kg = -weight_kg;
+ROLLBACK TO SP1;
+UPDATE animals SET weight_kg = -weight_kg WHERE weight_kg<0;
+COMMIT;
+
+SELECT COUNT(*) FROM animals; 
+SELECT COUNT(*) FROM animals WHERE escape_attempts>0; 
+SELECT AVG(weight_kg) FROM animals;
+SELECT neutered, MAX(escape_attempts) AS escapes_attempts FROM animals GROUP BY neutered ORDER BY MAX(escape_attempts) DESC ;
+SELECT MAX(weight_kg) AS max_weight, MIN(weight_kg) AS min_weight FROM animals; 
+SELECT AVG(escape_attempts) AS avarage_escape_attempts 
+FROM animals 
+WHERE date_of_birth >= '1990/01/01' AND date_of_birth <= '2000/12/31';
