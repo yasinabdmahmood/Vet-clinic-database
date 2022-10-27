@@ -88,3 +88,90 @@ UPDATE animals SET owner_id =4   WHERE name IN ('Charmander', 'Squirtle', 'Bloss
 --Dean Winchester owns Angemon and Boarmon.
 UPDATE animals SET owner_id =5   WHERE name IN ('Angemon', 'Boarmon');
 
+--Week1 Project 3
+
+-- Insert the following data for vets:
+-- Vet William Tatcher is 45 years old and graduated Apr 23rd, 2000.
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES ('William Tatcher', 45, '2000-4-23');
+--Vet Maisy Smith is 26 years old and graduated Jan 17th, 2019.
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES('Maisy Smith', 26, '2019-2-17');
+--Vet Stephanie Mendez is 64 years old and graduated May 4th, 1981.
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES('Stephanie Mendez', 64, '1981-5-4');
+--Vet Jack Harkness is 38 years old and graduated Jun 8th, 2008.
+INSERT INTO vets (name, age, date_of_graduation)
+VALUES('Jack Harkness', 38, '2008-1-8');
+
+--Insert the following data for specialties:
+--Vet William Tatcher is specialized in Pokemon.
+INSERT INTO specializations (vet_id,specie_id) VALUES (1,1);
+--Vet Stephanie Mendez is specialized in Digimon and Pokemon.
+INSERT INTO specializations (vet_id,specie_id) VALUES (3,1);
+INSERT INTO specializations (vet_id,specie_id) VALUES (3,2);
+--Vet Jack Harkness is specialized in Digimon.
+INSERT INTO specializations (vet_id,specie_id) VALUES (4,2);
+
+--Insert the following data for visits
+--Agumon visited William Tatcher on May 24th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(1, 1, '2020-5-24');
+--Agumon visited Stephanie Mendez on Jul 22th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(3, 1, '2020-7-22');
+--Gabumon visited Jack Harkness on Feb 2nd, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(4, 2, '2021-2-2');
+--Pikachu visited Maisy Smith on Jan 5th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 3, '2020-1-5');
+--Pikachu visited Maisy Smith on Mar 8th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 3, '2020-3-8');
+--Pikachu visited Maisy Smith on May 14th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 3, '2020-5-14');
+--Devimon visited Stephanie Mendez on May 4th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(3, 4, '2021-5-14');
+--Charmander visited Jack Harkness on Feb 24th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(4, 5, '2021-2-24');
+--Plantmon visited Maisy Smith on Dec 21st, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 6, '2019-12-21');
+--Plantmon visited William Tatcher on Aug 10th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(1, 6, '2020-8-10');
+--Plantmon visited Maisy Smith on Apr 7th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 6, '2021-4-7');
+--Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(3, 7, '2019-9-29');
+--Angemon visited Jack Harkness on Oct 3rd, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(4, 8, '2020-10-3');
+--Angemon visited Jack Harkness on Nov 4th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(4, 8, '2020-11-4');
+--Boarmon visited Maisy Smith on Jan 24th, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 9, '2019-2-24');
+--Boarmon visited Maisy Smith on May 15th, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 9, '2019-5-15');
+--Boarmon visited Maisy Smith on Feb 27th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 9, '2020-2-27');
+--Boarmon visited Maisy Smith on Aug 3rd, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(2, 9, '2020-8-3');
+--Blossom visited Stephanie Mendez on May 24th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(3, 10, '2020-5-24');
+--Blossom visited William Tatcher on Jan 11th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(1, 10, '2021-1-11');
+
